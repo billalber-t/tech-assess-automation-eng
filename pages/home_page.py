@@ -21,6 +21,22 @@ class HomePage(BasePage):
         time.sleep(5)
         self.driver.find_element(By.ID, "fi-q").send_keys(item_name)
         time.sleep(4)
+        self.driver.find_element(By.XPATH, "//button[normalize-space()='Search']")
+        time.sleep(4)
+
+        self.driver.find_element(By.XPATH, "(//div[@class='dpdw _pcent'])[1]").click()
+
+        time.sleep(4)
+        self.driver.find_element(By.XPATH, "//a[normalize-space()='Sign In']")
+
+        time.sleep(4)
+        self.driver.find_element(By.ID, "input_identifierValue").send_keys("assessbill5@gmail.com")
+
+        time.sleep(4)
+        self.driver.find_element(By.ID, "//button[@type='submit']").click()
+
+        time.sleep(4)
+        self.driver.find_element(By.XPATH, "//input[@name='password']").send_keys("Albertbill100%")
         # self.find_element(*HomePageSelectors.SEARCH_BAR).send_keys(item_name)
 
         # self.click_element(*HomePageSelectors.LOGIN_BUTTON)
