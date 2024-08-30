@@ -62,6 +62,12 @@ if __name__ == "__main__":
     subject = "Test Automation Report"
     body = "Please find the attached HTML report."
 
+    # Use absolute path to the report file
+    project_root = os.path.dirname(os.path.abspath(__file__))  # Path to the directory containing this script
+    attachment_path = os.path.join(project_root, '..', 'report', 'report.html')
+
+    # Resolve absolute path
+    attachment_path = os.path.abspath(attachment_path)
     html_report_path = "../report/report.html"
     assets_folder_path = "./report/assess"
     zip_path = "../report/asset.zip"

@@ -55,7 +55,14 @@ if __name__ == "__main__":
     recipient_email = "abill2363@gmail.com"
     subject = "Test Automation Report"
     body = "Please find the attached HTML report."
-    attachment_path = "../report/report.html"
+
+    # Use absolute path to the report file
+    project_root = os.path.dirname(os.path.abspath(__file__))  # Path to the directory containing this script
+    attachment_path = os.path.join(project_root, '..', 'report', 'report.html')
+    # Resolve absolute path
+    attachment_path = os.path.abspath(attachment_path)
+
+    # attachment_path = "../report/report.html"
 
     # Invoke the send email method
     send_email_with_attachment(sender_email, sender_password, recipient_email, subject, body, attachment_path)
