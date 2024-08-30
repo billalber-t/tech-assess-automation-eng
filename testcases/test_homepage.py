@@ -11,7 +11,6 @@ class TestHomePage(BaseTest):
 
     def test_login(self):
         home_page = HomePage(self.driver)
-        home_page.open_homepage()
         home_page.login()
 
     def test_search_for_item(self):

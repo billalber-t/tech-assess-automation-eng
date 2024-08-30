@@ -39,9 +39,8 @@ class HomePage(BasePage):
         time.sleep(2)
 
         self.click_element(*HomePageSelectors.SIGN_IN_BUTTON)
-        time.sleep(2)
 
-        time.sleep(4)
+        time.sleep(5)
         self.driver.find_element(By.ID, "input_identifierValue").send_keys("assessbill5@gmail.com")
 
         time.sleep(2)
